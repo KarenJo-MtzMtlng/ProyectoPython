@@ -1,0 +1,25 @@
+
+contador = 0
+máx_contador = 3
+
+while contador < máx_contador:
+    contraseña = input("Ingresa una contraseña: ")
+    
+    if contraseña[0].isdigit():
+        contraseñavalidar = input("Ingrese nuevamente la contraseña: ")
+        
+        if contraseña == contraseñavalidar:
+            print("Contraseña Correcta")
+            print("Fin del Programa")
+            break
+        else:
+            print("Las contraseñas no coinciden")
+            contador += 1
+    else:
+        print("La contraseña debe iniciar con un número")
+        contador += 1
+        
+
+if contador == máx_contador:
+    print("Se ha alcanzado el número máximo de intentos")
+    print("Fin del programa")
